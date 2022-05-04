@@ -1,0 +1,18 @@
+version: "3.6"
+services:
+  redis:
+    image: redis:5.0.3
+    ports:
+      - "6379:6379"
+
+  postgres:
+    image: postgres:11-alpine
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: guarantee-database
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    volumes:
+      - ./.docker/database_data:/var/lib/postgresql/data
+

@@ -1,0 +1,6 @@
+rootProject.name = 'guarantee-service'
+include 'domain'
+include 'application'
+include 'infrastructure'
+include 'presentation'
+
